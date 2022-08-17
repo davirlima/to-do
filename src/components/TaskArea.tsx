@@ -1,7 +1,7 @@
 import { ClipboardText } from "phosphor-react";
-import styles from "./Tasks.module.css";
+import styles from "./TaskArea.module.css";
 
-export function Tasks() {
+export function TaskArea() {
   return (
     <div className={styles.tasksArea}>
       <div className={styles.informationTasks}>
