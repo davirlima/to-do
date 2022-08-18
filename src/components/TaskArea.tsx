@@ -12,9 +12,15 @@ export function TaskArea() {
   const [tasks, setTasks] = useState([""]);
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
-    console.log("Task created: " + taskText);
     setTasks([...tasks, taskText]);
     setTaskText("");
+  }
+
+  function handleDeleteTask(taskToDelete: string) {
+    const tasksToKeep = tasks.filter((tasks) => {
+      return tasks !== taskToDelete;
+    });
+    setTasks(tasksToKeep);
   }
 
   return (
@@ -42,7 +48,18 @@ export function TaskArea() {
             Concluídas <span>0</span>
           </h2>
         </div>
-        <Task task={tasks} isDefaultReturn={tasks.length == 1} />
+        <form>
+          {tasks.map((task) => {
+            return (
+              <Task
+                key={task}
+                newTask={task}
+                isDefaultReturn={tasks.length == 1}
+                onDeleteTask={handleDeleteTask}
+              />
+            );
+          })}
+        </form>
       </div>
     </>
   );

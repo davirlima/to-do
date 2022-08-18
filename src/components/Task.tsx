@@ -2,13 +2,17 @@ import { Check, ClipboardText, Trash } from "phosphor-react";
 import styles from "./Task.module.css";
 
 interface TaskProps {
-  task: string[];
+  newTask: string;
   isDefaultReturn: boolean;
+  onDeleteTask: (taskToDelete: string) => void;
 }
 
 export function Task(props: TaskProps) {
+  function deleteThisTask() {
+    props.onDeleteTask(props.newTask);
+  }
+
   if (props.isDefaultReturn == true) {
-    console.log("entrou aqui");
     return (
       <div className={styles.defaultInformation}>
         <ClipboardText size={56} color="var(--gray-400)" />
@@ -20,20 +24,22 @@ export function Task(props: TaskProps) {
         </h3>
       </div>
     );
-  } else {
+  } else if (props.newTask !== "") {
     return (
       <div className={styles.taskContainer}>
-        <input id="checkbox" type="checkbox" value={props.task} />
+        <input id="checkbox" type="checkbox" value={props.newTask} />
         <span>
           <Check className={styles.checkIcon} weight="bold" />
         </span>
         <label className={styles.taskContent} htmlFor="checkbox">
-          {props.task}
+          {props.newTask}
         </label>
-        <button className={styles.deleteButton}>
+        <button onClick={deleteThisTask} className={styles.deleteButton}>
           <Trash size={20} />
         </button>
       </div>
     );
+  } else {
+    return <span></span>;
   }
 }
