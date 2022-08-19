@@ -25,6 +25,11 @@ Esta é uma aplicação web para a criação e organização tarefas, com o intu
   />
 </div>
 
+## Bibliotecas:
+
+* UUID;
+* Phosphor Icons.
+
 ## Acesse a aplicação:
 
 <https://to-do-davirlima.vercel.app/>
