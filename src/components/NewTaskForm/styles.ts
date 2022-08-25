@@ -11,27 +11,26 @@ export const FormContainer = styled.form`
   input {
     width: 100%;
     padding: 1rem;
-
-    background-color: var(--gray-500);
-    border: 1px solid var(--gray-700);
+    background-color: ${(props) => props.theme.gray_500};
+    border: 1px solid ${(props) => props.theme.gray_700};
     border-radius: 8px;
-    color: var(--gray-300);
+    color: ${(props) => props.theme.gray_300};
 
     &:focus {
       outline: none;
-      border: 1px solid var(--purple-dark);
-      color: var(--gray-100);
+      border: 1px solid ${(props) => props.theme.purple_dark};
+      color: ${(props) => props.theme.gray_100};
     }
   }
 
   button {
     padding: 1rem;
 
-    color: var(--gray-100);
+    color: #f2f2f2;
     font: 0.875rem;
     font-weight: 700;
 
-    background-color: var(--blue-dark);
+    background-color: ${(props) => props.theme.blue_dark};
     transition: background-color, 0.5s;
     border: none;
     border-radius: 8px;
@@ -45,7 +44,7 @@ export const FormContainer = styled.form`
     }
 
     &:not(:disabled):hover {
-      background-color: var(--blue);
+      background-color: ${(props) => props.theme.blue};
     }
   }
 `;

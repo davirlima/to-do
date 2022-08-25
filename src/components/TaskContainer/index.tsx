@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { ClipboardText } from "phosphor-react";
 import {
   DefaultInformationContainer,
-  InformationAboutTasksContainer,
+  InformationAboutTasks,
   TasksContainer,
 } from "./styles";
 
@@ -76,7 +76,7 @@ export function TaskContainer() {
       <NewTaskForm handleCreateNewTask={handleCreateNewTask} />
 
       <TasksContainer>
-        <InformationAboutTasksContainer>
+        <InformationAboutTasks>
           <h2 className="createdTasks">
             Tarefas criadas <span>{tasks.length}</span>
           </h2>
@@ -84,11 +84,11 @@ export function TaskContainer() {
             Concluídas
             <span>{calculateConcludedTasks()}</span>
           </h2>
-        </InformationAboutTasksContainer>
+        </InformationAboutTasks>
 
         {tasks.length == 0 ? (
           <DefaultInformationContainer>
-            <ClipboardText size={56} color="var(--gray-400)" />
+            <ClipboardText size={56} className="icon" />
             <h2>Você ainda não tem tarefas cadastradas</h2>
             <h3>Crie tarefas e organize seus itens a fazer</h3>
           </DefaultInformationContainer>

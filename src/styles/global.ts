@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-:root {
+/* :root {
     --gray-100: #f2f2f2;
     --gray-200: #d9d9d9;
     --gray-300: #808080;
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     --blue-dark-opacity: rgb(30, 111, 159, 0.2);
   
     --danger: #e25858;
-  }
+  } */
   
   * {
     margin: 0;
@@ -31,9 +31,9 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    background-color: var(--gray-600);
+    background-color: ${(props) => props.theme.gray_600};
     -webkit-font-smothing: antialiased;
-    color: var(--gray-300);
+    color: ${(props) => props.theme.gray_300};
   }
   
   body,

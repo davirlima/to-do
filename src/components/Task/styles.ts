@@ -7,8 +7,8 @@ export const TaskContainer = styled.div`
   padding: 1rem;
   width: 100%;
 
-  background-color: var(--gray-500);
-  border: 1px solid var(--gray-400);
+  background-color: ${(props) => props.theme.gray_500};
+  border: 1px solid ${(props) => props.theme.gray_400};
   border-radius: 8px;
 
   display: flex;
@@ -32,31 +32,31 @@ export const TaskContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    border: 2px solid var(--blue);
+    border: 2px solid ${(props) => props.theme.blue};
     border-radius: 100%;
 
     transition: border, background-color, 0.3s;
 
     .checkIcon {
-      color: var(--gray-100);
+      color: ${(props) => props.theme.gray_100};
       font-size: 80%;
       visibility: hidden;
     }
   }
 
   input:not(checked):hover ~ span {
-    border: 2px solid var(--blue-dark);
-    background-color: var(--blue-dark-opacity);
+    border: 2px solid ${(props) => props.theme.blue_dark};
+    background-color: ${(props) => props.theme.blue_dark_opacity};
   }
 
   input:checked ~ span {
-    border: 2px solid var(--purple-dark);
-    background-color: var(--purple-dark);
+    border: 2px solid ${(props) => props.theme.purple_dark};
+    background-color: ${(props) => props.theme.purple_dark};
   }
 
   input:checked:hover ~ span {
-    border: 2px solid var(--purple);
-    background-color: var(--purple);
+    border: 2px solid ${(props) => props.theme.purple};
+    background-color: ${(props) => props.theme.purple};
   }
 
   input:checked ~ span .checkIcon {
@@ -64,7 +64,7 @@ export const TaskContainer = styled.div`
   }
 
   label {
-    color: var(--gray-100);
+    color: ${(props) => props.theme.gray_100};
     font-size: 0.875rem;
     text-align: left;
     line-height: 1.4;
@@ -73,7 +73,7 @@ export const TaskContainer = styled.div`
 
   input:checked ~ label {
     text-decoration: line-through;
-    color: var(--gray-300);
+    color: ${(props) => props.theme.gray_300};
   }
 
   button {
@@ -88,12 +88,12 @@ export const TaskContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gray-300);
+    color: ${(props) => props.theme.gray_300};
     transition: background-color, color, 0.3s;
 
     &:hover {
-      color: var(--danger);
-      background-color: var(--gray-400);
+      color: ${(props) => props.theme.danger};
+      background-color: ${(props) => props.theme.gray_400};
     }
   }
 `;

@@ -29,7 +29,7 @@ export function NewTaskForm({ handleCreateNewTask }: NewTaskFormProps) {
         autoFocus={true}
       />
       <button type="submit" disabled={taskContent == ""}>
-        Criar <PlusCircle color="var(--gray-100)" size={16} weight="bold" />
+        Criar <PlusCircle size={16} weight="bold" />
       </button>
     </FormContainer>
   );

@@ -5,3 +5,18 @@ export const Container = styled.main`
   margin: 0 auto;
   padding: 0 1rem 1rem 1rem;
 `;
+
+export const ButtonControlTheme = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #f2f2f2;
+`;

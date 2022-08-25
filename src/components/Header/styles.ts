@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  background-color: var(--gray-700);
+  background-color: ${(props) => props.theme.gray_700};
   height: 12.5rem;
   display: flex;
   align-items: center;
@@ -16,26 +16,13 @@ export const HeaderContainer = styled.header`
 
   h1 {
     font-weight: 900;
-    color: var(--blue);
+    /* color: var(--blue); */
+    color: ${(props) => props.theme.blue};
     font-size: 2.5rem;
 
     span {
-      color: var(--purple-dark);
+      /* color: var(--purple-dark); */
+      color: ${(props) => props.theme.purple_dark};
     }
   }
-`;
-
-export const ButtonControlTheme = styled.button`
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--gray-100);
 `;
