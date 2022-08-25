@@ -1,9 +1,10 @@
 # To Do List
 
 Esta é uma aplicação web para a criação e organização tarefas, com o intuito de organização pessoal; apresentando as seguintes funções:
-  * Criar uma nova tarefa;
-  * Escluir uma tarefa;
-  * Marcar a terefa como concluída.
+
+- Criar uma nova tarefa;
+- Escluir uma tarefa;
+- Marcar a terefa como concluída.
 
 ## Tecnologias:
 
@@ -27,8 +28,9 @@ Esta é uma aplicação web para a criação e organização tarefas, com o intu
 
 ## Bibliotecas:
 
-* UUID;
-* Phosphor Icons.
+- UUID;
+- Phosphor Icons;
+- styled-components.
 
 ## Acesse a aplicação:
 
@@ -36,40 +38,40 @@ Esta é uma aplicação web para a criação e organização tarefas, com o intu
 
 ## Se deseja executar o projeto localmente, realize os seguintes passos:
 
-*Obs:* Tenha o *Node.js v.16.17.0* instalado em sua máquina
+_Obs:_ Tenha o _Node.js v.16.17.0_ instalado em sua máquina
 
 1. Clone o repositório em seu terminal com o comando:
 
- ~~~bash
- git clone https://github.com/davirlima/to-do.git
- ~~~
- 
+```bash
+git clone https://github.com/davirlima/to-do.git
+```
+
 2. Instale as dependências com o comando:
 
-  ~~~bash
-  npm install
-  # ou
-  yarn install
-  ~~~
-  
+```bash
+npm install
+# ou
+yarn install
+```
+
 3. Execute a aplicação com o comando:
 
-  ~~~bash
-  npm run dev
-  # ou
-  yarn dev
-  ~~~
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
 ## Interface:
 
-* Desktop e Laptop:
+- Desktop e Laptop:
 
 <img
   src="https://user-images.githubusercontent.com/97968740/185658813-c46f26f7-9764-49b2-9ca2-a075252a10e5.png"
   alt="Interfaca da Aplicação To Do List em Desktop e Laptop"
 />
 
-* Mobile:
+- Mobile:
 
 <img
   height="800px"
