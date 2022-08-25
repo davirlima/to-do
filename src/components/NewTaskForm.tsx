@@ -1,55 +1,35 @@
-import { PlusCircle } from "phosphor-react";
-import { ChangeEvent, FormEvent, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-
 import styles from "./NewTaskForm.module.css";
 
+import { PlusCircle } from "phosphor-react";
+import { ChangeEvent, FormEvent, useState } from "react";
+
 interface NewTaskFormProps {
-  tasks: {
-    id: string;
-    content: string;
-    isCompleted: boolean;
-  }[];
-  setTasks: (
-    task: {
-      id: string;
-      content: string;
-      isCompleted: boolean;
-    }[]
-  ) => void;
+  handleCreateNewTask: (taskContent: string) => void;
 }
 
-export function NewTaskForm({ tasks, setTasks }: NewTaskFormProps) {
-  function handleCreateNewTask(event: FormEvent) {
-    event.preventDefault();
-    setTasks([
-      ...tasks,
-      {
-        id: uuidv4(),
-        content: taskText,
-        isCompleted: false,
-      },
-    ]);
-    setTaskText("");
+export function NewTaskForm({ handleCreateNewTask }: NewTaskFormProps) {
+  const [taskContent, setTaskContent] = useState("");
+  function handleCreateTaskContent(event: ChangeEvent<HTMLInputElement>) {
+    setTaskContent(event.target.value);
   }
 
-  const [taskText, setTaskText] = useState("");
-
-  function handleAtualizeTaskText(event: ChangeEvent<HTMLInputElement>) {
-    setTaskText(event.target.value);
+  function createNewTask(event: FormEvent) {
+    event.preventDefault();
+    handleCreateNewTask(taskContent);
+    setTaskContent("");
   }
 
   return (
-    <form onSubmit={handleCreateNewTask} className={styles.taskForm}>
+    <form onSubmit={createNewTask} className={styles.taskForm}>
       <input
         type="text"
-        onChange={handleAtualizeTaskText}
-        value={taskText}
+        onChange={handleCreateTaskContent}
+        value={taskContent}
         placeholder="Adicione uma nova tarefa"
         required={true}
         autoFocus={true}
       />
-      <button type="submit" disabled={taskText == ""}>
+      <button type="submit" disabled={taskContent == ""}>
         Criar <PlusCircle color="var(--gray-100)" size={16} weight="bold" />
       </button>
     </form>
