@@ -1,8 +1,7 @@
-import { ClipboardText, PlusCircle } from "phosphor-react";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { useState } from "react";
 import { Task } from "./Task";
 import styles from "./TaskArea.module.css";
-import { v4 as uuidv4 } from "uuid";
+import { NewTaskForm } from "./NewTaskForm";
 
 export function TaskArea() {
   const [tasks, setTasks] = useState([
@@ -12,25 +11,6 @@ export function TaskArea() {
       isCompleted: false,
     },
   ]);
-
-  const [taskText, setTaskText] = useState("");
-
-  function handleAtualizeTaskText(event: ChangeEvent<HTMLInputElement>) {
-    setTaskText(event.target.value);
-  }
-
-  function handleCreateNewTask(event: FormEvent) {
-    event.preventDefault();
-    setTasks([
-      ...tasks,
-      {
-        id: uuidv4(),
-        content: taskText,
-        isCompleted: false,
-      },
-    ]);
-    setTaskText("");
-  }
 
   function handleDeleteTask(idOfTaskToDelete: string) {
     const tasksToKeep = tasks.filter((tasks) => {
@@ -75,21 +55,8 @@ export function TaskArea() {
   }
 
   return (
-    <>
-      <form onSubmit={handleCreateNewTask} className={styles.taskForm}>
-        <input
-          type="text"
-          onChange={handleAtualizeTaskText}
-          value={taskText}
-          placeholder="Adicione uma nova tarefa"
-          required={true}
-          autoFocus={true}
-        />
-        <button type="submit" disabled={taskText == ""}>
-          Criar <PlusCircle color="var(--gray-100)" size={16} weight="bold" />
-        </button>
-      </form>
-
+    <div>
+      <NewTaskForm tasks={tasks} setTasks={setTasks} />
       <div className={styles.tasksArea}>
         <div className={styles.informationTasks}>
           <h2 className={styles.createdTasks}>
@@ -114,6 +81,6 @@ export function TaskArea() {
           })}
         </form>
       </div>
-    </>
+    </div>
   );
 }
