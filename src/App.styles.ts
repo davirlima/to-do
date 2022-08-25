@@ -19,4 +19,10 @@ export const ButtonControlTheme = styled.button`
   border: none;
   cursor: pointer;
   color: #f2f2f2;
+
+  transition: opacity, 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
