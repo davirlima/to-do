@@ -1,5 +1,5 @@
-import { Check, ClipboardText, Trash } from "phosphor-react";
-import styles from "./Task.module.css";
+import { Check, Trash } from "phosphor-react";
+import { TaskContainer } from "./styles";
 
 interface TaskProps {
   taskId: string;
@@ -16,24 +16,19 @@ export function Task({
   changeStatusOfThisTask,
 }: TaskProps) {
   return (
-    <div className={styles.taskContainer}>
+    <TaskContainer>
       <input
         id="checkbox"
         type="checkbox"
         onClick={() => changeStatusOfThisTask(taskId)}
       />
       <span>
-        <Check className={styles.checkIcon} weight="bold" />
+        <Check className="checkIcon" weight="bold" />
       </span>
-      <label className={styles.taskContent} htmlFor="checkbox">
-        {taskContent}
-      </label>
-      <button
-        onClick={() => deleteThisTask(taskId)}
-        className={styles.deleteButton}
-      >
+      <label htmlFor="checkbox">{taskContent}</label>
+      <button onClick={() => deleteThisTask(taskId)}>
         <Trash size={20} />
       </button>
-    </div>
+    </TaskContainer>
   );
 }

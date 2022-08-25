@@ -1,9 +1,13 @@
 import { useState } from "react";
-import { Task } from "./Task";
-import styles from "./TaskContainer.module.css";
-import { NewTaskForm } from "./NewTaskForm";
+import { Task } from "../Task";
+import { NewTaskForm } from "../NewTaskForm";
 import { v4 as uuidv4 } from "uuid";
 import { ClipboardText } from "phosphor-react";
+import {
+  DefaultInformationContainer,
+  InformationAboutTasksContainer,
+  TasksContainer,
+} from "./styles";
 
 interface Task {
   id: string;
@@ -71,27 +75,23 @@ export function TaskContainer() {
     <div>
       <NewTaskForm handleCreateNewTask={handleCreateNewTask} />
 
-      <div className={styles.tasksArea}>
-        <div className={styles.informationTasks}>
-          <h2 className={styles.createdTasks}>
+      <TasksContainer>
+        <InformationAboutTasksContainer>
+          <h2 className="createdTasks">
             Tarefas criadas <span>{tasks.length}</span>
           </h2>
-          <h2 className={styles.concludedTasks}>
+          <h2 className="concludedTasks">
             Concluídas
             <span>{calculateConcludedTasks()}</span>
           </h2>
-        </div>
+        </InformationAboutTasksContainer>
 
         {tasks.length == 0 ? (
-          <div className={styles.defaultInformation}>
+          <DefaultInformationContainer>
             <ClipboardText size={56} color="var(--gray-400)" />
-            <h2 className={styles.titleDefaultInformation}>
-              Você ainda não tem tarefas cadastradas
-            </h2>
-            <h3 className={styles.subtitleDefaultInformation}>
-              Crie tarefas e organize seus itens a fazer
-            </h3>
-          </div>
+            <h2>Você ainda não tem tarefas cadastradas</h2>
+            <h3>Crie tarefas e organize seus itens a fazer</h3>
+          </DefaultInformationContainer>
         ) : (
           <form>
             {tasks.map((task) => {
@@ -107,7 +107,7 @@ export function TaskContainer() {
             })}
           </form>
         )}
-      </div>
+      </TasksContainer>
     </div>
   );
 }

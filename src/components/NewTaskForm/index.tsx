@@ -1,7 +1,6 @@
-import styles from "./NewTaskForm.module.css";
-
 import { PlusCircle } from "phosphor-react";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { FormContainer } from "./styles";
 
 interface NewTaskFormProps {
   handleCreateNewTask: (taskContent: string) => void;
@@ -20,7 +19,7 @@ export function NewTaskForm({ handleCreateNewTask }: NewTaskFormProps) {
   }
 
   return (
-    <form onSubmit={createNewTask} className={styles.taskForm}>
+    <FormContainer onSubmit={createNewTask}>
       <input
         type="text"
         onChange={handleCreateTaskContent}
@@ -32,6 +31,6 @@ export function NewTaskForm({ handleCreateNewTask }: NewTaskFormProps) {
       <button type="submit" disabled={taskContent == ""}>
         Criar <PlusCircle color="var(--gray-100)" size={16} weight="bold" />
       </button>
-    </form>
+    </FormContainer>
   );
 }
