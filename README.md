@@ -38,7 +38,8 @@ Aplicação web para a organização de tarefas pessoais, utilizando *ReactJS*.
 
 * uuid;
 * phosphor-icons;
-* styled-components.
+* styled-components;
+* react-switch.
 
 ## :hammer: Funcionalidades:
 
