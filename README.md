@@ -3,7 +3,7 @@
 Esta é uma aplicação web para a criação e organização tarefas, com o intuito de organização pessoal; apresentando as seguintes funções:
 
 - Criar uma nova tarefa;
-- Escluir uma tarefa;
+- Excluir uma tarefa;
 - Marcar a terefa como concluída;
 - **Extra:** Alterar entre tema light e dark.
 
