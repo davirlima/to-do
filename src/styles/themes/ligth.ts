@@ -1,11 +1,13 @@
 export const LightTheme = {
-  gray_700: "#0d0d0d",
-  gray_600: "#ededed",
-  gray_500: "#c1c1c1",
-  gray_400: "#cccccc",
-  gray_300: "#292929",
-  gray_200: "#191919",
-  gray_100: "#111111",
+  title: "lightTheme",
+
+  gray_700: "#555555",
+  gray_600: "#dadada",
+  gray_500: "#d0d0d0",
+  gray_400: "#c8c8c8",
+  gray_300: "#3c3c3c",
+  gray_200: "#333333",
+  gray_100: "#212121",
 
   purple: "#5660ce",
   purple_dark: "#5660ce",

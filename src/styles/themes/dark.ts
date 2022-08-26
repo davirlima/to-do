@@ -1,4 +1,6 @@
 export const DarkTheme = {
+  title: "darkTheme",
+
   gray_700: "#0d0d0d",
   gray_600: "#1a1a1a",
   gray_500: "#262626",

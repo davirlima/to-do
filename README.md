@@ -8,7 +8,7 @@
 
 # To do List
 
-Aplicação web para a organização de tarefas pessoais, utilizando *ReactJS*.
+Aplicação web para a organização de tarefas pessoais, utilizando _ReactJS_.
 
 :link: <https://to-do-davirlima.vercel.app/> :link:
 
@@ -36,9 +36,10 @@ Aplicação web para a organização de tarefas pessoais, utilizando *ReactJS*.
 
 ## :books: Bibliotecas:
 
-* uuid;
-* phosphor-icons;
-* styled-components.
+- uuid;
+- phosphor-icons;
+- styled-components;
+- react-switch.
 
 ## :hammer: Funcionalidades:
 
@@ -49,29 +50,30 @@ Aplicação web para a organização de tarefas pessoais, utilizando *ReactJS*.
 
 ## :open_file_folder: Execute o projeto localmente
 
-:heavy_exclamation_mark: **Requisitos:** *Node.js v.16.17.0*
+:heavy_exclamation_mark: **Requisitos:** _Node.js v.16.17.0_
 
 1. Clone o repositório:
 
- ~~~bash
- git clone https://github.com/davirlima/to-do.git
- ~~~
- 
+```bash
+git clone https://github.com/davirlima/to-do.git
+```
+
 2. Instale as dependências com o comando:
 
-  ~~~bash
-  npm install
-  # ou
-  yarn install
-  ~~~
-  
+```bash
+npm install
+# ou
+yarn install
+```
+
 3. Execute a aplicação com o comando:
 
-  ~~~bash
-  npm run dev
-  # ou
-  yarn dev
-  ~~~
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
 <!--
 ## :computer: Interfaces:
 
