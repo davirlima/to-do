@@ -67,26 +67,12 @@ yarn dev
 
 - Desktop e Laptop:
 
-<img
-  src="https://user-images.githubusercontent.com/97968740/185658813-c46f26f7-9764-49b2-9ca2-a075252a10e5.png"
-  alt="Interfaca da Aplicação To Do List, Modo Dark, em Desktop e Laptop"
-/>
-
-<img
-  src="https://user-images.githubusercontent.com/97968740/186788660-c982e18e-bd45-49c1-ab6f-8ff568303f5d.png"
-  alt="Interfaca da Aplicação To Do List, Modo Light, em Desktop e Laptop"
-/>
+Dark             |  Light
+:-------------------------:|:-------------------------:
+![Interface da Aplicação To Do List, Modo Dark, em Desktop](https://user-images.githubusercontent.com/97968740/186789425-1798af7a-4dbd-4e47-b242-90b9c63f95aa.png)  |  ![Interfaca da Aplicação To Do List, Modo Light, em Desktop](https://user-images.githubusercontent.com/97968740/186789491-cb71881d-d121-4ccd-a6db-10887532adb3.png)
 
 - Mobile:
 
-<img
-  height="800px"
-  src="https://user-images.githubusercontent.com/97968740/185659105-fb400b84-6b3a-443f-85ec-52610c11a3a2.png"
-  alt="Interfaca da Aplicação To Do List, Modo Dark, em Mobile"
-/>
-
-<img
-  height="800px"
-  src="https://user-images.githubusercontent.com/97968740/186788772-b35769a0-e4f6-4322-a6ef-0529471de8b0.png"
-  alt="Interfaca da Aplicação To Do List, Modo Light, em Mobile"
-/>
+Dark             |  Light
+:-------------------------:|:-------------------------:
+![Interface da Aplicação To Do List, Modo Dark, em Mobile](https://user-images.githubusercontent.com/97968740/186789338-be3e7585-58de-4530-86d6-d1009477028b.png)  |  ![Interfaca da Aplicação To Do List, Modo Light, em Mobile](https://user-images.githubusercontent.com/97968740/186789264-d37c8231-c775-49e3-9c65-6be435c10f9c.png)
