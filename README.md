@@ -1,15 +1,22 @@
-# To Do List
+<div align="center">
 
-Esta é uma aplicação web para a criação e organização tarefas, com o intuito de organização pessoal; apresentando as seguintes funções:
+<img
+  src="https://user-images.githubusercontent.com/97968740/186961239-53baa3bd-baed-4481-abbc-1224b9391038.svg"
+  alt="To Do List Icon"
+  width=5%
+/>
 
-- Criar uma nova tarefa;
-- Excluir uma tarefa;
-- Marcar a terefa como concluída;
-- **Extra:** Alterar entre tema light e dark.
+# To do List
 
-## Tecnologias:
+Aplicação web para a organização de tarefas pessoais, utilizando *ReactJS*.
 
-<div style=display: inline-block>
+:link: <https://to-do-davirlima.vercel.app/> :link:
+
+</div>
+
+## :heavy_check_mark: Tecnologias:
+
+<div>
   <img 
     height="50px"
     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -27,52 +34,63 @@ Esta é uma aplicação web para a criação e organização tarefas, com o intu
   />
 </div>
 
-## Bibliotecas:
+## :books: Bibliotecas:
 
-- UUID;
-- Phosphor Icons;
-- styled-components.
+* uuid;
+* phosphor-icons;
+* styled-components.
 
-## Acesse a aplicação:
+## :hammer: Funcionalidades:
 
-<https://to-do-davirlima.vercel.app/>
+- **Criar uma tarefa;**
+- **Excluir uma tarefa;**
+- **Marcar a terefa como concluída;**
+- **Alterar o tema da aplicação entre light e dark.**
 
-## Se deseja executar o projeto localmente, realize os seguintes passos:
+## :open_file_folder: Execute o projeto localmente
 
-_Obs:_ Tenha o _Node.js v.16.17.0_ instalado em sua máquina
+:heavy_exclamation_mark: **Requisitos:** *Node.js v.16.17.0*
 
-1. Clone o repositório em seu terminal com o comando:
+1. Clone o repositório:
 
-```bash
-git clone https://github.com/davirlima/to-do.git
-```
-
+ ~~~bash
+ git clone https://github.com/davirlima/to-do.git
+ ~~~
+ 
 2. Instale as dependências com o comando:
 
-```bash
-npm install
-# ou
-yarn install
-```
-
+  ~~~bash
+  npm install
+  # ou
+  yarn install
+  ~~~
+  
 3. Execute a aplicação com o comando:
 
-```bash
-npm run dev
-# ou
-yarn dev
-```
+  ~~~bash
+  npm run dev
+  # ou
+  yarn dev
+  ~~~
+<!--
+## :computer: Interfaces:
 
-## Interface:
-
-- Desktop e Laptop:
-
-Dark             |  Light
-:-------------------------:|:-------------------------:
-![Interface da Aplicação To Do List, Modo Dark, em Desktop](https://user-images.githubusercontent.com/97968740/186789425-1798af7a-4dbd-4e47-b242-90b9c63f95aa.png)  |  ![Interfaca da Aplicação To Do List, Modo Light, em Desktop](https://user-images.githubusercontent.com/97968740/186789491-cb71881d-d121-4ccd-a6db-10887532adb3.png)
-
-- Mobile:
-
-Dark             |  Light
-:-------------------------:|:-------------------------:
-![Interface da Aplicação To Do List, Modo Dark, em Mobile](https://user-images.githubusercontent.com/97968740/186789338-be3e7585-58de-4530-86d6-d1009477028b.png)  |  ![Interfaca da Aplicação To Do List, Modo Light, em Mobile](https://user-images.githubusercontent.com/97968740/186789264-d37c8231-c775-49e3-9c65-6be435c10f9c.png)
+<div align="center">
+  <img
+   src="https://user-images.githubusercontent.com/97968740/186958740-f89fe11a-f890-4622-becd-8963a8cf1e2e.png"
+   alt="Interface da Aplicação Ignite Feed em Desktop e Laptop"
+   width=74%
+  />
+  <img
+   src="https://user-images.githubusercontent.com/97968740/186958817-bcb3a6e6-4f4c-4c27-834b-c3c658a09e6b.png"
+   alt="Interface da Aplicação Ignite Feed em Mobile"
+   width=25%
+  />
+  <img
+   src="https://user-images.githubusercontent.com/97968740/186959572-2d33eb49-af4e-4d2a-8d38-a5ce68ba34f2.gif"
+   alt="GIF demonstrativo da aplicação"
+   width=99%
+   align="center"
+  />
+</div>
+-->
