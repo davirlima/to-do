@@ -2,16 +2,18 @@ import { Check, Trash } from "phosphor-react";
 import { TaskContainer } from "./styles";
 
 interface TaskProps {
-  taskId: string;
-  taskContent: string;
+  task: {
+    id: string;
+    content: string;
+    isCompleted: boolean;
+  };
 
   deleteThisTask: (idOfTaskToDelete: string) => void;
   changeStatusOfThisTask: (idOfTaskToChange: string) => void;
 }
 
 export function Task({
-  taskId,
-  taskContent,
+  task,
   deleteThisTask,
   changeStatusOfThisTask,
 }: TaskProps) {
@@ -20,13 +22,14 @@ export function Task({
       <input
         id="checkbox"
         type="checkbox"
-        onClick={() => changeStatusOfThisTask(taskId)}
+        onClick={() => changeStatusOfThisTask(task.id)}
+        defaultChecked={task.isCompleted}
       />
       <span>
         <Check className="checkIcon" weight="bold" />
       </span>
-      <label htmlFor="checkbox">{taskContent}</label>
-      <button onClick={() => deleteThisTask(taskId)}>
+      <label htmlFor="checkbox">{task.content}</label>
+      <button onClick={() => deleteThisTask(task.id)}>
         <Trash size={20} />
       </button>
     </TaskContainer>

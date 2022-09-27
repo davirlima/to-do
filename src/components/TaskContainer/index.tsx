@@ -110,8 +110,7 @@ export function TaskContainer() {
               return (
                 <Task
                   key={task.id}
-                  taskId={task.id}
-                  taskContent={task.content}
+                  task={task}
                   deleteThisTask={handleDeleteTask}
                   changeStatusOfThisTask={handleChangeTaskStatus}
                 />
