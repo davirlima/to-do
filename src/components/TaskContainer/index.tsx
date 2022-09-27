@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Task } from "../Task";
 import { NewTaskForm } from "../NewTaskForm";
 import { v4 as uuidv4 } from "uuid";
@@ -16,7 +16,18 @@ interface Task {
 }
 
 export function TaskContainer() {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>(() => {
+    const taskOnStorage = localStorage.getItem("task");
+    if (taskOnStorage) {
+      return JSON.parse(taskOnStorage);
+    } else {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("task", JSON.stringify(tasks));
+  }, [tasks]);
 
   function handleCreateNewTask(taskContent: string) {
     setTasks((state) => [
@@ -34,6 +45,7 @@ export function TaskContainer() {
       return tasks.id !== idOfTaskToDelete;
     });
     setTasks(tasksToKeep);
+    localStorage.setItem("task", JSON.stringify(tasks));
   }
 
   function handleChangeTaskStatus(idOfTaskToChengeStatus: string) {
